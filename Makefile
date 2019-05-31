@@ -1,4 +1,4 @@
 build:
 	docker build -t jasonmccallister/go-echo:local .
 run: build
-	docker run -i -t --rm -e LISTEN_PORT=5001 jasonmccallister/go-echo:local
+	docker run -i -t --rm -e LISTEN_PORT=5001 -p 5001:5001 jasonmccallister/go-echo:local
