@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -22,6 +23,9 @@ func main() {
 		}
 
 		w.Header().Set("Content-Type", "application/json")
+
+		fmt.Println(r.Body)
+
 		w.Write(b)
 	})
 
