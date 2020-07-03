@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	port := os.Getenv("LISTEN_PORT")
+	port := os.Getenv("PORT")
 	if port == "" {
 		port = "5000"
 	}
